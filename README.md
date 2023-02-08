@@ -1,2 +1,8 @@
 # pasteriarushi
-investigation into FLASK
+investigation into FLASK:
+- HTML
+- CSS
+- Bootstrap
+- Python
+- Flask
+-SQLite
