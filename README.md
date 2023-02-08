@@ -1,5 +1,5 @@
 # pasteriarushi
-investigation into FLASK:
+investigation into:
 - HTML
 - CSS
 - Bootstrap
