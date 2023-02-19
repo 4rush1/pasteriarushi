@@ -1,0 +1,158 @@
+/* Root section to add background colour etc. */
+
+:root{
+    
+    /* declared these variable / colours so that we can use them any time 
+    THIS IS A CSS VARIABLE */
+    
+    /* background colour */
+    --cream: rgb(238,236,217);
+    /* colour to highlight certain sections e.g Navbar or footer */
+    --light-teel: rgb(175,208,202);
+    /* Hover colour for text */
+    --dark-teel: rgb(110, 191, 178);
+    /* text colour aka black */
+    --text: rgb(0,0,0);
+}
+
+/* we incorperate our front by importing it and putting it at the top of our style page as well as in the body--> */
+/* we have to put the input statement after the root */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap');
+
+
+body{
+    /* font size must be 100% */
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 100%;
+    background-color: var(--cream);
+}
+
+/* TEXT */
+
+.quote{
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    padding: 1em 1em;
+    color: var(--text);
+}
+
+.body-text{
+    font-size: 2em;
+    text-align: center;
+    color: var(--text);
+}
+
+h1{
+    font-size: 3em;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* LAYOUT */
+
+.container-fluid{
+    border: 0px solid black;
+    padding:0;
+    
+}
+
+.container-lg{
+    border: 0px solid blue;
+    background-color: white;
+/* to get rid of the natural space between 2 div tags / sections */
+    overflow: auto;
+/* gives a space between the difference containers */
+    margin-bottom: 2.5em;
+    
+}
+
+.col-lg-7, .col-lg-5{
+    border: 0px solid blue;
+}
+
+.row{
+    border: 0px solid red;
+    padding: 1em 0 1em 0; 
+}
+
+/* IMAGES */
+
+/* to style the image a little more, add bordering, etc. WHY IS MY IMAGE SO BIG THO? */
+.part-img{
+    max-width: 75%;
+    margin: auto;
+    display: block;
+}
+
+/* SCREEN LAYOUT */
+/* MEANING for any screen width UP TO 768px/576 (WHICH IS MEDIUM) apply these styles:
+
+ */ 
+@media only screen and (max-width:768px){
+    
+    .body-text , .quote{
+        font-size: 1.5em;
+    }
+    
+    .h1{
+        font-size:2em;
+    }
+}
+
+@media only screen and (max-width:576px){
+/* I feel like my image is too big and is always 100% */
+    
+    .part-image{
+        max-width: 100%;
+        
+    }
+}
+
+/* FOOTER */
+
+.footer-content{
+    background-color: var(--light-teel);
+    text-align: center;
+    padding: 0.5em 0 o.5em 0;
+    color: white;
+}
+
+.footer-content p:first-child{
+    font-weight:600;
+    font-size: 1.5em;
+}
+
+/* NAVIGATION */
+
+.navbar{
+    background-color: var(--light-teel);
+    border-bottom: 1px solid black;
+    }
+    
+    /* styles used for when you hover over items */
+.nav-item:hover{
+    background-color: var(--dark-teel);
+    }
+    
+    /* this is for the text in the nav bar */
+.nav-link{
+    font-size: 1.5em;
+    color: black;
+    }
+    
+.nav-link:hover{
+    color: dimgrey;
+    }
+    
+.btn-outline{
+        border: 1px solid white;
+/* this sets a TOP BOTTOM padding of 0, LEFT RIGHT padding of 1em */
+        padding: 0 1em;
+    }
+    
+.btn-outline:hover{
+        background-color: var(--dark-teel);
+    }
